@@ -1,0 +1,101 @@
+
+body{
+    background-color: rgb(96, 163, 185);
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+
+  img {
+    box-shadow: 8px 8px 0px rgb(44, 40, 40); 
+  }
+
+  #slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    height: 650px;
+}
+
+#slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    max-height: 100%;
+}
+
+#slides figure {
+    display: inline-block;
+    width: 100vw;
+    max-height: 100%;
+    margin: 0;
+}
+
+#slides figure img {
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#slides figure figcaption {
+    position: absolute;
+    bottom: 0;
+    padding: 2.5em 0;
+    text-align: center;
+    width: inherit;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+}
+
+
+@keyframes slide {
+  0%, 20%, 100% {
+      left: 0; 
+  }
+  35%, 50% {
+      left: -100vw;
+  }
+  70%, 95% {
+      left: -200vw;
+  }
+}
+
+#slides {
+
+  animation-name: slide;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#slides {
+  animation: slide 10s infinite ease-in-out forwards;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
